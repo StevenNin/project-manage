@@ -1,0 +1,12 @@
+#TeamIntro{
+    width: 379px;
+    height: 88px;
+}
+#TeamIntro~span {
+    display: block;
+    color: #9ba0a5;
+    text-align: left;
+    margin-left: 18%;
+    font-size: 13px;
+    font-style: italic;
+}

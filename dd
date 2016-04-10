@@ -1,0 +1,66 @@
+[1mdiff --git a/targetList.html b/targetList.html[m
+[1mindex e259b79..82ad5c0 100644[m
+[1m--- a/targetList.html[m
+[1m+++ b/targetList.html[m
+[36m@@ -98,7 +98,7 @@[m
+                     <!--<input type="text" class="span5 search" placeholder="Type a project's name..." />-->[m
+ [m
+                     <div class="ui-dropdown">[m
+[31m-                        <div class="head" data-toggle="tooltip" title="Click me!">[m
+[32m+[m[32m                        <div class="head" data-toggle="tooltip" title="筛选">[m
+                             过滤目标[m
+                             <i class="arrow-down"></i>[m
+                         </div>[m
+[36m@@ -137,16 +137,16 @@[m
+                             目标名称[m
+                         </th>[m
+                         <th class="span3 sortable">[m
+[31m-                            <span class="line"></span>目标[m
+[32m+[m[32m                            <span class="line"></span>创建日期[m
+                         </th>[m
+                         <th class="span2 sortable">[m
+[31m-                            <span class="line"></span>目标[m
+[32m+[m[32m                            <span class="line"></span>经费[m
+                         </th>[m
+                         <th class="span3 sortable">[m
+                             <span class="line"></span>所属项目[m
+                         </th>[m
+                         <th class="span3 sortable target">[m
+[31m-                            <span class="line"></span>进度[m
+[32m+[m[32m                            <span class="line"></span>目标进度[m
+                         </th>[m
+                         <th class="span3 sortable align-right">[m
+                             <span class="line"></span>目标管理[m
+[36m@@ -157,8 +157,8 @@[m
+                     <!-- row -->[m
+                     <tr class="first" data-projectId="123">[m
+                         <td>[m
+[31m-                            <a href="targetIntro.html" class="name">Alejandra Galvan Castillo</a>[m
+[31m-                            <span class="subtext">Alkali</span>[m
+[32m+[m[32m                            <a href="targetIntro.html" class="name">编写代码</a>[m
+[32m+[m[32m                            <span class="subtext">张三</span>[m
+                         </td>[m
+                         <td>[m
+                             Mar 13, 2012[m
+[36m@@ -167,10 +167,10 @@[m
+                             $ 4,500.00[m
+                         </td>[m
+                         <td>[m
+[31m-                            <a href="projectDescrib.html">我是项目名称,我可以被点击</a>[m
+[32m+[m[32m                            <a href="projectDescrib.html">宿舍管理系统</a>[m
+                         </td>[m
+                         <td>[m
+[31m-                            <div class="slider slider-sample2" data-process="20"></div>[m
+[32m+[m[32m                            <div class="slider slider-sample2" data-process="45"></div>[m
+                         </td>[m
+                         <td class="align-right">[m
+                             <a class="icon pull-right delete-user" data-projectId="123" data-toggle="tooltip" title="删除该目标" data-placement="top">[m
+[36m@@ -238,7 +238,7 @@[m
+                     <!-- row -->[m
+                     <tr>[m
+                         <td>[m
+[31m-                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>[m
+[32m+[m[32m                            <a href="projectDescrib.html" class="name">需求设计</a>[m
+                             <span class="subtext">Alkalixin Design</span>[m
+                         </td>[m
+                         <td>[m

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>创建新团队</title>
+    <link rel="stylesheet" href="css/new/main.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/new/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/compiled/creatProject.css">
+
+</head>
+<body>
+<header>
+    <div class="new-header clearfix">
+        <img src="img/logo.png" alt="">
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">这里的</a></li>
+            <li><a href="#">文案</a></li>
+            <li><a href="#">我不知道</a></li>
+            <li><a href="#">该填什么</a></li>
+            <li><a href="#">abc</a></li>
+            <li><a href="#">登陆</a></li>
+            <!--<li><a href="#">退出</a></li>-->
+        </ul>
+    </div>
+
+</header>
+
+<!-- main container -->
+<div class="content">
+
+    <div class="container-fluid">
+        <div id="pad-wrapper" class="new-user">
+            <div class="row-fluid header">
+                <h3>创建新的团队</h3>
+            </div>
+
+            <div class="row-fluid form-wrapper">
+                <!-- left column -->
+                <div class="span9 with-sidebar">
+                    <div class="container">
+                        <form class="new_user_form inline-input" />
+                        <div class="span12 field-box">
+                            <label>团队名称:</label>
+                            <input class="span9" type="text" id="Project_name" />
+                        </div>
+                        <!--<div class="span12 field-box">-->
+                            <!--<label>团队负责人:</label>-->
+                            <!--<input id="ResPerson_id" class="span9" type="text" />-->
+                        <!--</div>-->
+                        <div class="span12 field-box">
+                            <label>绑定项目:</label>
+                            <div class="ui-select span5">
+                                <select id="Team_id">
+                                    <option value="notChoose">暂时不绑定项目</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="CA">California</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="AZ">Arizona</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<div class="span12 field-box">-->
+                            <!--<label for="startTime">项目开始时间:</label>-->
+                            <!--<input id="startTime" class="span9" type="date" />-->
+                        <!--</div>-->
+                        <div class="span12 field-box">
+                            <label>创建日期:</label>
+                            <input id="createDate" class="span9" type="date" />
+                        </div>
+                        <div class="span12 field-box">
+                            <label>组长职责:</label>
+                            <input id="leaderDuty" class="span9" type="text" />
+                        </div>
+                        <div class="span12 field-box">
+                            <label>导师职责:</label>
+                            <input id="teacherDuty" class="span9" type="text" />
+                        </div>
+                        <!--<div class="span12 field-box">-->
+                            <!--<label>项目目录:</label>-->
+                            <!--<input id="ProjectPath" class="span9" type="text" />-->
+                        <!--</div>-->
+                        <div class="span12 field-box textarea">
+                            <label>团队介绍:</label>
+                            <textarea id="TeamIntro" class="span9"></textarea>
+                            <span class="charactersleft">最多输入100字,还剩<span id="number">100</span>字</span>
+                        </div>
+                        <div class="span11 field-box actions">
+                            <input type="button" class="btn-glow primary" value="创建" />
+                            <span>OR</span>
+                            <a href="teamList.html">取消</a>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main container -->
+
+
+<footer class="new-footer">
+    <p>
+        <a href="#">关于红岩网校</a>
+        <span>|</span>
+        <a href="#">网站地图</a>
+        <span>|</span>
+        <a href="#">指出错误</a>
+        <span>|</span>
+        <a href="#">管理入口</a>
+        <span>|</span><br/>
+        本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载<br/>
+        地址：重庆市南岸区崇文路2号（重庆邮电大学内） 400065 E-mail :redrock@cqupt.edu.cn (023-62461084)
+    </p>
+</footer>
+
+
+<!-- scripts -->
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+
+<script>
+    $(function(){
+        $('#TeamIntro').keyup(function(){
+            countCar($(this));
+        });
+        function countCar(val){
+            var len = val.val().length;
+            $('#number').html(100 - len);
+            if (len >= 100) {
+                val.val(val.val().substring(0, 100));
+                $('#number').html(0);
+            }
+        }
+
+        //获取当前时间
+        var createDate = $('#createDate');
+        var time = new Date();
+        var mounth = time.getMonth() + 1;
+        var date = time.getDate();
+        if(mounth < 10) mounth = '0' + mounth;
+        if(date < 10) date = '0' + date;
+        createDate.val(time.getFullYear() + '-' + mounth + '-' + date);
+    });
+</script>
+
+</body>
+</html>

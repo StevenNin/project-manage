@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>目标进度详情</title>
+    <link rel="stylesheet" href="css/new/main.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/new/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.css" />
+
+    <link rel="stylesheet" href="css/compiled/introdectionMyself.css">
+    <link rel="stylesheet" href="css/compiled/projectDescrib.css">
+    <link rel="stylesheet" href="css/compiled/progressIntro.css">
+
+</head>
+<body>
+<header>
+    <div class="new-header clearfix">
+        <img src="img/logo.png" alt="">
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">这里的</a></li>
+            <li><a href="#">文案</a></li>
+            <li><a href="#">我不知道</a></li>
+            <li><a href="#">该填什么</a></li>
+            <li><a href="#">abc</a></li>
+            <li><a href="#">登陆</a></li>
+            <!--<li><a href="#">退出</a></li>-->
+        </ul>
+    </div>
+
+</header>
+
+
+<!-- main container -->
+<div class="content">
+
+    <div class="container-fluid">
+        <div id="pad-wrapper" class="user-profile">
+            <!-- header -->
+            <div class="row-fluid header">
+                <div class="span8">
+                    <h3 id="name" class="name">目标进度详情</h3>
+                </div>
+                <!--<a class="btn-flat icon pull-right delete-user" data-toggle="tooltip" title="删除该目标" data-placement="top">-->
+                <!--<i class="icon-trash"></i>-->
+                <!--</a>-->
+                <!--<a href="teamDescribUpdate.html" class="btn-flat icon large pull-right edit">-->
+                <!--修改目标-->
+                <!--</a>-->
+            </div>
+
+            <div class="row-fluid profile">
+                <!-- bio, new note & orders column -->
+                <div class="span9 bio">
+                    <h6>目标详情</h6>
+                    <br />
+                    <div class="profile-box">
+                        <!-- biography -->
+
+                        <div id="progrees_details" class="span12 section">
+                            <p> 这个目标是完成需求还是代码完成度。。。</p>
+                        </div>
+                        <div class="row-fluid1">
+                            柱状图
+                        </div>
+                        <div class="proChange">
+                            <a href=" #" class="btn-flat icon large pull-right edit">
+                                提交修改
+                            </a>
+                        </div>
+                        <div>
+                            <a href=" #" class="btn-flat icon large pull-right edit">
+                                修改目标进度
+                            </a>
+                        </div>
+
+
+
+                        <br />
+                        <!-- recent orders table -->
+
+
+                    </div>
+                </div>
+
+                <!-- side address column -->
+                <div style="width: 150px;height: 200px;background-color:#1c94c4 " class="konb-wrapper">
+                    饼图
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main container -->
+
+
+<footer class="new-footer">
+    <p>
+        <a href="#">关于红岩网校</a>
+        <span>|</span>
+        <a href="#">网站地图</a>
+        <span>|</span>
+        <a href="#">指出错误</a>
+        <span>|</span>
+        <a href="#">管理入口</a>
+        <span>|</span><br/>
+        本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载<br/>
+        地址：重庆市南岸区崇文路2号（重庆邮电大学内） 400065 E-mail :redrock@cqupt.edu.cn (023-62461084)
+    </p>
+</footer>
+
+
+<!-- scripts -->
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/confirm.js"></script>
+
+<script>
+    //注册删除按钮的事件
+    $('.delete-user').click(function () {
+
+        var projectId = $(this);
+
+        //弹出警告框
+        Ewin.confirm({ message: "确认要删除选择的数据吗？" }).on(function (e) {
+            if (!e) {
+                return;
+            }
+            console.log(projectId);
+            $.ajax({
+                type: "post",
+//                    url: "/project/deleteProject",
+//                    data: { "": JSON.stringify(arrselections) },
+                success: function (data, status) {
+                    if (status == "success") {
+//                            toastr.success('提交数据成功');
+//                            $("#tb_departments").bootstrapTable('refresh');
+                    }
+                },
+                error: function () {
+//                        toastr.error('Error');
+                },
+                complete: function () {
+
+                }
+
+            });
+        });
+    });
+
+
+    //如果没有关联团队
+    var hasTeam = false;
+    if(!hasTeam){
+        var table = $('#table'),
+                relate = $('#relate'),
+                chooseTeam = $('#choose-team'),
+                saveButton = $('#save-button'),
+                teamName = $('#Team_name');
+
+        table.hide();
+        relate.show();
+
+        relate.click(function () {
+            //变更界面
+            relate.parent().hide();
+            chooseTeam.show();
+            saveButton.show();
+            return false;
+        });
+
+        $('#save-button input[type="button"]').click(function(){
+            //提交更改
+
+            var value = teamName.val();
+            console.log('提交更改' + value);
+
+
+            //变更界面
+            relate.parent().show();
+            chooseTeam.hide();
+            saveButton.hide();
+            return false;
+        });
+
+        $('#save-button a').click(function(){
+            //取消更改
+            //变更界面
+            relate.parent().show();
+            chooseTeam.hide();
+            saveButton.hide();
+            return false;
+        });
+    }
+
+</script>
+
+</body>
+</html>

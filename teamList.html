@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>团队列表</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet"/>
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="css/new/reset.css">
+    <link rel="stylesheet" href="css/new/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css"/>
+
+    <!-- libraries -->
+    <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" href="css/compiled/projectList.css">
+
+    <!-- open sans font -->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'/>
+
+</head>
+<body>
+<header>
+    <div class="new-header clearfix">
+        <img src="img/logo.png" alt="">
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">这里的</a></li>
+            <li><a href="#">文案</a></li>
+            <li><a href="#">我不知道</a></li>
+            <li><a href="#">该填什么</a></li>
+            <li><a href="#">abc</a></li>
+            <li><a href="#">登陆</a></li>
+            <!--<li><a href="#">退出</a></li>-->
+        </ul>
+    </div>
+</header>
+
+<!-- main container -->
+<div class="content">
+
+    <div class="container-fluid">
+        <div id="pad-wrapper" class="users-list">
+            <div class="row-fluid header">
+                <h3>团队列表</h3>
+                <div class="span10 pull-right">
+                    <input type="text" class="span5 search" placeholder="Type a team's name..."/>
+
+                    <div class="ui-dropdown">
+                        <div class="head" data-toggle="tooltip" title="Click me!">
+                            过滤团队
+                            <i class="arrow-down"></i>
+                        </div>
+                        <div class="dialog">
+                            <div class="pointer">
+                                <div class="arrow"></div>
+                                <div class="arrow_border"></div>
+                            </div>
+                            <div class="body">
+                                <p class="title">
+                                    Show users where:
+                                </p>
+                                <div class="form">
+                                    <select>
+                                        <option>Name</option>
+                                        <option>Email</option>
+                                        <option>Number of orders</option>
+                                        <option>Signed up</option>
+                                        <option>Last seen</option>
+                                    </select>
+                                    <select>
+                                        <option>is equal to</option>
+                                        <option>is not equal to</option>
+                                        <option>is greater than</option>
+                                        <option>starts with</option>
+                                        <option>contains</option>
+                                    </select>
+                                    <input type="text"/>
+                                    <a class="btn-flat small">Add filter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="creatTeam.html" class="btn-flat success pull-right">
+                        <span>&#43;</span>
+                        创建团队
+                    </a>
+                </div>
+            </div>
+
+            <!-- Users table -->
+            <div class="row-fluid table">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="span4 sortable">
+                            团队名称
+                        </th>
+                        <th class="span3 sortable">
+                            <span class="line"></span>团队创建时间
+                        </th>
+                        <th class="span2 sortable">
+                            <span class="line"></span>负责项目
+                        </th>
+                        <th class="span3 sortable align-right">
+                            <span class="line"></span>团队介绍
+                        </th>
+                        <!--<th class="span3 sortable align-right">-->
+                        <!--<span class="line"></span>团队管理-->
+                        <!--</th>-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- row -->
+                    <tr class="first">
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">Alkali</span>
+                        </td>
+                        <td>
+                            Mar 13, 2012
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">Alkali Design</span>
+                        </td>
+                        <td>
+                            Jun 03, 2012
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">Alkalixin Design</span>
+                        </td>
+                        <td>
+                            Mar 01, 2014
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">Graphic Dign</span>
+                        </td>
+                        <td>
+                            Jan 28, 2012
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">负责人姓名</span>
+                        </td>
+                        <td>
+                            May 16, 2012
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">负责人姓名</span>
+                        </td>
+                        <td>
+                            Sep 06, 2012
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">负责人姓名</span>
+                        </td>
+                        <td>
+                            Jul 13, 2012
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">负责人姓名</span>
+                        </td>
+                        <td>
+                            Feb 13, 2014
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    <!-- row -->
+                    <tr>
+                        <td>
+                            <a href="teamDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                            <span class="subtext">负责人姓名</span>
+                        </td>
+                        <td>
+                            Feb 27, 2014
+                        </td>
+                        <td>
+                            <a href="projectDescrib.html" class="name">Alejandra Galvan Castillo</a>
+                        </td>
+                        <td class="align-right">
+                            <a href="#">alejandra@canvas.com</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination pull-right">
+                <ul>
+                    <li><a href="#">&#8249;</a></li>
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&#8250;</a></li>
+                </ul>
+            </div>
+            <!-- end users table -->
+        </div>
+    </div>
+</div>
+<!-- end main container -->
+
+
+<footer class="new-footer">
+    <p>
+        <a href="#">关于红岩网校</a>
+        <span>|</span>
+        <a href="#">网站地图</a>
+        <span>|</span>
+        <a href="#">指出错误</a>
+        <span>|</span>
+        <a href="#">管理入口</a>
+        <span>|</span><br/>
+        本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载<br/>
+        地址：重庆市南岸区崇文路2号（重庆邮电大学内） 400065 E-mail :redrock@cqupt.edu.cn (023-62461084)
+    </p>
+</footer>
+
+<!-- scripts -->
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>修改目标信息</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/new/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/new/main.css">
+
+    <link rel="stylesheet" href="css/compiled/introdectionMyselfUpdate.css">
+    <link rel="stylesheet" href="css/compiled/teamDescribUpdate.css">
+
+</head>
+<body>
+<header>
+    <div class="new-header clearfix">
+        <img src="img/logo.png" alt="">
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">这里的</a></li>
+            <li><a href="#">文案</a></li>
+            <li><a href="#">我不知道</a></li>
+            <li><a href="#">该填什么</a></li>
+            <li><a href="#">abc</a></li>
+            <li><a href="#">登陆</a></li>
+            <!--<li><a href="#">退出</a></li>-->
+        </ul>
+    </div>
+
+</header>
+
+<div class="content wide-content">
+    <div class="container-fluid">
+        <div class="settings-wrapper" id="pad-wrapper">
+            <!-- avatar column -->
+            <!--<div class="span3 avatar-box">-->
+            <!--<div class="personal-image">-->
+            <!--<img src="img/personal-info.jpg" class="avatar img-circle" />-->
+            <!--<p>Upload a different photo...</p>-->
+
+            <!--<input type="file" id="upload-file" accept="image/*" />-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!-- edit form column -->
+            <div class="span7 personal-info">
+                <h5 class="personal-title">目标信息</h5>
+
+                <form />
+                <div class="field-box">
+                    <label>目标名称:</label>
+                    <input id="Project_name" class="span5 inline-input" type="text" value="Alkali" />
+                </div>
+                <div class="field-box">
+                    <label>负责人:</label>
+                    <div class="ui-select">
+                        <select id="ResPerson_id">
+                            <option value="man">asd</option>
+                            <option value="woman">Alkali</option>
+                            <option value="woman">Alkali</option>
+                            <option value="woman">Alkali</option>
+                            <option value="woman">Alkali</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field-box">
+                    <label>QQ:</label>
+                    <input id="QQ" class="span5 inline-input" type="text" value="799478793" />
+                </div>
+                <div class="field-box">
+                    <label>邮箱:</label>
+                    <input id="email" class="span5 inline-input" type="text" value="i@alkalixin.cn" />
+                </div>
+                <!--<div class="field-box">-->
+                <!--<label>Time Zone:</label>-->
+                <!--<div class="ui-select">-->
+                <!--<select id="user_time_zone" name="user[time_zone]">-->
+                <!--<option value="Hawaii">(GMT-10:00) Hawaii</option>-->
+                <!--<option value="Alaska">(GMT-09:00) Alaska</option>-->
+                <!--<option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>-->
+                <!--<option value="Arizona">(GMT-07:00) Arizona</option>-->
+                <!--<option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>-->
+                <!--<option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>-->
+                <!--<option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>-->
+                <!--<option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>-->
+                <!--</select>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="field-box">
+                    <label>电话:</label>
+                    <input id="phone" class="span5 inline-input" type="text" value="13452378332" />
+                </div>
+                <!--<div class="field-box">-->
+                <!--<label>密码:</label>-->
+                <!--<input id="passWord" class="span5 inline-input" type="password" value="blablablabla" />-->
+                <!--</div>-->
+                <!--<div class="field-box">-->
+                <!--<label>确认密码:</label>-->
+                <!--<input id="confirm-passWord" class="span5 inline-input" type="password" value="blablablabla" />-->
+                <!--</div>-->
+                <div class="field-box">
+                    <label>项目介绍:</label>
+                    <textarea id="Project_intro" class="span9"></textarea><br />
+                    <span class="charactersleft">最多输入100字,还剩<span id="number">100</span>字</span>
+                </div>
+                <div class="span6 field-box actions">
+                    <input type="button" class="btn-glow primary" value="保存" />
+                    <span>OR</span>
+                    <a href="projectDescrib.html">取消</a>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main container -->
+
+
+
+<footer class="new-footer">
+    <p>
+        <a href="#">关于红岩网校</a>
+        <span>|</span>
+        <a href="#">网站地图</a>
+        <span>|</span>
+        <a href="#">指出错误</a>
+        <span>|</span>
+        <a href="#">管理入口</a>
+        <span>|</span><br/>
+        本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载<br/>
+        地址：重庆市南岸区崇文路2号（重庆邮电大学内） 400065 E-mail :redrock@cqupt.edu.cn (023-62461084)
+    </p>
+</footer>
+
+<!-- scripts -->
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+
+<!--<script src="js/personal-info.js"></script>-->
+<script>
+    $(function(){
+        $('#Project_intro').keyup(function(){
+            countCar($(this));
+        });
+        function countCar(val){
+            var len = val.val().length;
+            $('#number').html(100 - len);
+            if (len >= 100) {
+                val.val(val.val().substring(0, 100));
+                $('#number').html(0);
+            }
+        }
+    });
+</script>
+</body>
+</html>

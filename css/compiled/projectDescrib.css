@@ -1,0 +1,14 @@
+.address h6{
+    margin: 0 !important;
+}
+#choose-team{
+    display: none;
+}
+#choose-team label{
+    display: inline;
+}
+#save-button{
+    display: none;
+    margin-top: 30px;
+    margin-left: 0;
+}
